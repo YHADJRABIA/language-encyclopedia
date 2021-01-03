@@ -1,0 +1,35 @@
+{
+  "firstName": "Yacine",
+  "lastName": "Hadj Rabia",
+  "myself": "Myself",
+  "languages": {
+    "en": "English",
+    "fr": "French",
+    "ru": "Russian",
+    "sv": "Swedish"
+  },
+  "occupations": [
+    "Full Stack Developer",
+    "Part-time translator",
+    "Language enthusiast"
+  ],
+  "navNames": {
+    "about": "About",
+    "skills": "Skills",
+    "portfolio": "Portfolio"
+  },
+  "about": {
+    "title": "About me",
+    "content": "Following my graduation as an Electrical Engineer and after a first work experience mixing electronics and web development, I decided to retrain as a Full Stack Web Developer through a 3-month coding bootcamp given better job opportunities in that field. Most of my spare time is spent honing my skills, acquiring new ones, or making the subtitles of a Russian series.\n Here I am now, looking for opportunities as a Web Developer. For your reference — my Russian and Swedish are self-taught."
+  },
+  "skills": {
+    "title": "Skills",
+    "content": "Initially trained as an Electrical Engineer, coding has been an ubiquitous part of a curriculum within which the use of MATLAB, VHDL and other Electrical-Engineering-oriented tools were common practice to the chip-coding and microcontroller-handling student I used to be. Given the nature of the position I wish to hold — skills that are irrelevant to Web Development won't be showcased below. Bear in mind that – as a keen learner – I may list more skills soon enough!"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "content": "Do check out my Github page or LinkedIn profile to find out more about my work for now."
+  },
+  "madeWith": "Made with ReactJS",
+  "inProgress": "Under construction"
+}

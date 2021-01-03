@@ -1,0 +1,188 @@
+// @author Yacine Hadj Rabia
+/*----- Normalise styles -----*/
+//@import "./normalize.scss/normalize";
+
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker|Oswald|Press+Start+2P|Audiowide|Lobster");
+
+/*------------------------------- Sass parameters ---------------------------------------*/
+//Font types
+$primaryFont: "Permanent Marker";
+$secondaryFont: "Audiowide";
+$regularFont: "Oswald";
+
+//Colours
+$primaryColour: #1b1a1a;
+$secondaryColour: #f2f2f5;
+$thirdColour: #fff;
+$navColour: #00008c;
+$spanColour: #ffce00;
+$secondaryBorder: 1px solid #dcd9d9;
+
+/*- Centred flex -*/
+@mixin flexCenter($direction) {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-flow: wrap $direction;
+}
+
+/*- Reset params -*/
+@mixin initialProperties {
+  position: initial;
+  min-height: inherit;
+  transform: none;
+}
+
+/*------------------------------ Global parameters ------------------------------------*/
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-family: $regularFont;
+  background-color: inherit;
+}
+
+/* Responsive calibration — 1rem = 10px, footer adjustment */
+html {
+  font-size: 62.5%;
+  position: relative;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  //overflow-x: hidden;
+  @include flexCenter(row);
+  min-height: 100%;
+}
+
+button {
+  color: white;
+}
+
+/* Fonts */
+h1 {
+  font-family: $primaryFont;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: "Lobster";
+  font-size: 3rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+}
+
+p {
+  color: $primaryColour;
+  font-size: 2rem;
+  line-height: 1.8;
+}
+
+/* Various */
+
+i {
+  font-size: 5rem;
+}
+
+span {
+  color: $spanColour;
+}
+
+ul {
+  align-items: center;
+}
+
+a {
+  cursor: pointer;
+  color: white;
+}
+
+/*---------- Reponsive parameters ---------*/
+$breakpoints: (
+  phone: 640px,
+  tablet: 768px,
+  desktop: 1024px,
+) !default;
+
+/* Effects and animations */
+.loading {
+  box-shadow: 0 0 0 7px $primaryColour, inset 0 0 0 1px $primaryColour;
+  position: relative;
+  height: 5rem;
+  width: 24rem;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  animation: rotate 2s linear infinite;
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: $navColour;
+    animation: load 2s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  0%,
+  42% {
+    transform: rotate(0deg);
+  }
+  48%,
+  92% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes load {
+  0% {
+    width: 0;
+  }
+  40%,
+  50% {
+    width: 100%;
+  }
+  90%,
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*--- Imports ---*/
+@import "./header";
+@import "./main";
+@import "./footer";
+
+/*------------- Reponsive ---------*/
+//Tablet
+@media only screen and (min-width: map-get($breakpoints, tablet)) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  //Desktop
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+  }
+}

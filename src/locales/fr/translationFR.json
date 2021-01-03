@@ -1,0 +1,35 @@
+{
+  "firstName": "Yacine",
+  "lastName": "HADJ RABIA",
+  "myself": "Moi-même",
+  "languages": {
+    "en": "Anglais",
+    "fr": "Français",
+    "ru": "Russe",
+    "sv": "Suédois"
+  },
+  "occupations": [
+    "Développeur Full stack",
+    "Traducteur à temps partiel",
+    "Passionné de langues"
+  ],
+  "navNames": {
+    "about": "À propos",
+    "skills": "Compétences",
+    "portfolio": "Portfolio"
+  },
+  "about": {
+    "title": "Me concernant",
+    "content": "Suivant l'obtention d'un Master 2 en électronique et après une première expérience professionnelle en ESN, j'ai décidé de me reconvertir en Développeur Web à travers un bootcamp de 3 mois et étant données des opportunités bien plus intéressantes dans ce domaine.\n Je passe la majeure partie de mon temps libre à acquérir de nouvelles compétences, à apprendre de nouvelles langues, ou encore à réaliser des sous-titres de séries Russes entre autres. À part cela, je suis à la recherche d'opportunités en tant que Développeur Web. La moitié des langues que je parle ont été apprises en autodidacte."
+  },
+  "skills": {
+    "title": "Compétences",
+    "content": "Ayant fait des études d'électronique, j'ai été introduit à la programmation relativement tôt durant des études où l'utilisation de MATLAB, VHDL et d'autres outils était pratique courante au long d'un cursus riche en codage de microcontrôleurs. Étant donné le poste de développeur web que je vise, seules les compétences pertinentes à ce domaine seront énumérées ci-dessous. Cette liste sera susceptible de contenir plus d'éléments à l'avenir, car je suis assez avide d'apprendre de nouvelles choses !"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "content": "Rendez-vous sur ma page GitHub ou profil LinkedIn pour en savoir davatange."
+  },
+  "madeWith": "Conçu avec ReactJS",
+  "inProgress": "En cours de réalisation"
+}
