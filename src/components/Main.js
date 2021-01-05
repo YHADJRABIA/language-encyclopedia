@@ -1,5 +1,15 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { DataContext } from "./Context";
 
-export default function Main() {
-  return <div></div>;
-}
+const Main = () => {
+  const countries = useContext(DataContext)[0];
+
+  return (
+    <>
+      <h1>Test</h1>
+      {console.log(countries)}
+    </>
+  );
+};
+
+export default Main;

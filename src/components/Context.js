@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import { useTranslation } from "react-i18next";
 
 /*To be imported by components that want to access the data.
@@ -7,6 +7,23 @@ export const DataContext = createContext();
 
 //Holds the data to be provided. To be imported by App.js.
 export const DataProvider = (props) => {
+  // Only runs when the component mounts
+  useEffect(() => {
+    fetchItems();
+  }, []); /*[] used to indicate that useEffect is only to be run once, or if a state is put inside
+ then any interaction with it would trigger it.*/
+
+  const [countries, setCountries] = useState([]);
+
+  const fetchItems = async () => {
+    const URL = "https://restcountries.eu/rest/v2/all"; // API URL
+    const response = await fetch(URL);
+    const data = await response.json(); // Fetching data then converting it to JSON
+    //console.log(data);
+    setCountries(data);
+  };
+
+  // Translations
   const { t, i18n } = useTranslation();
 
   const content = {
@@ -32,7 +49,7 @@ export const DataProvider = (props) => {
   Passing navTitles as a value to be consumed by Nav.js
   */
   return (
-    <DataContext.Provider value={content}>
+    <DataContext.Provider value={(content, [countries, setCountries])}>
       {props.children}
     </DataContext.Provider>
   );
